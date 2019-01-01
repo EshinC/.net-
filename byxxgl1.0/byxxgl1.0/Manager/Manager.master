@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Manager.master.cs" Inherits="Manager_Manager" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:Button ID="Logout" runat="server" OnClick="Logout_Click" PostBackUrl="~/Login.aspx" Text="安全退出" />
+    &nbsp;欢迎<asp:Label ID="Label1" runat="server" Text="老师"></asp:Label>
+    </div>
+        <table class="auto-style1">
+            <tr>
+                <td>
+                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" Target="_self">
+                        <Items>
+                            <asp:MenuItem Text="学生信息管理" Value="学生信息管理">
+                                <asp:MenuItem Text="查询学生信息" Value="查询学生信息" NavigateUrl="~/Manager/ManageStudentSelect.aspx"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Manager/ManageStudentAdd.aspx" Text="添加学生信息" Value="添加学生信息"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Manager/ManageStudentUpdate.aspx" Text="修改学生信息" Value="修改学生信息"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="企业信息管理" Value="新建项">
+                                <asp:MenuItem Text="查询企业信息" Value="查询企业信息" NavigateUrl="~/Manager/ManagerCompanySelect.aspx"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Manager/ManageCompanyAdd.aspx" Text="添加企业信息" Value="添加企业信息"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Manager/ManageCompanyUpdate.aspx" Text="修改企业信息" Value="修改企业信息"></asp:MenuItem>
+                            </asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+            </tr>
+            <tr>
+                <td>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
