@@ -40,6 +40,26 @@
         .auto-style7 {
             text-align: center;
         }
+        .auto-style15 {
+            width: 117px;
+            text-align: center;
+            height: 25px;
+        }
+        .auto-style16 {
+            width: 220px;
+            text-align: center;
+            height: 25px;
+        }
+        .auto-style17 {
+            width: 117px;
+            text-align: center;
+            height: 26px;
+        }
+        .auto-style18 {
+            width: 220px;
+            text-align: center;
+            height: 26px;
+        }
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -61,20 +81,20 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style10">
+            <td class="auto-style17">
                 <asp:Label ID="Label3" runat="server" Text="性别"></asp:Label>
             </td>
-            <td class="auto-style9">
-                <asp:RadioButtonList ID="RadioButtonList2" runat="server" RepeatDirection="Horizontal" Width="152px">
-                    <asp:ListItem Value="male">男</asp:ListItem>
-                    <asp:ListItem Value="female">女</asp:ListItem>
-                </asp:RadioButtonList>
+            <td class="auto-style18">
+                <asp:RadioButton ID="RadioButton1" runat="server" Checked="True" GroupName="1" Text="男" />
+                <asp:RadioButton ID="RadioButton2" runat="server" GroupName="1" Text="女" />
             </td>
         </tr>
         <tr>
             <td class="auto-style10">学院</td>
             <td class="auto-style9">
                 <asp:DropDownList ID="DropDownList1" runat="server">
+                    <asp:ListItem>管理学院</asp:ListItem>
+                    <asp:ListItem>土木学院</asp:ListItem>
                 </asp:DropDownList>
             </td>
         </tr>
@@ -84,6 +104,10 @@
             </td>
             <td class="auto-style9">
                 <asp:DropDownList ID="DropDownList2" runat="server">
+                    <asp:ListItem>信息管理与信息系统</asp:ListItem>
+                    <asp:ListItem>工程管理</asp:ListItem>
+                    <asp:ListItem>土地资源管理</asp:ListItem>
+                    <asp:ListItem>房地产开发与管理</asp:ListItem>
                 </asp:DropDownList>
             </td>
         </tr>
@@ -92,25 +116,23 @@
                 <asp:Label ID="Label13" runat="server" Text="毕业去向"></asp:Label>
             </td>
             <td class="auto-style9">
-                <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal" Width="152px">
-                    <asp:ListItem Value="enterSchool">升学</asp:ListItem>
-                    <asp:ListItem Value="work">就业</asp:ListItem>
-                </asp:RadioButtonList>
+                <asp:RadioButton ID="RadioButton3" runat="server" Checked="True" GroupName="2" Text="考研" />
+                <asp:RadioButton ID="RadioButton4" runat="server" GroupName="2" Text="就业" />
             </td>
         </tr>
         <tr>
-            <td class="auto-style10">
+            <td class="auto-style15">
                 <asp:Label ID="Label5" runat="server" Text="工作地点"></asp:Label>
             </td>
-            <td class="auto-style9">
+            <td class="auto-style16">
                 <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
-            <td class="auto-style10">
+            <td class="auto-style15">
                 <asp:Label ID="Label6" runat="server" Text="单位名称"></asp:Label>
             </td>
-            <td class="auto-style9">
+            <td class="auto-style16">
                 <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
             </td>
         </tr>
@@ -128,6 +150,9 @@
             </td>
             <td class="auto-style4">
                 <asp:DropDownList ID="DropDownList3" runat="server">
+                    <asp:ListItem>清华大学</asp:ListItem>
+                    <asp:ListItem>北京大学</asp:ListItem>
+                    <asp:ListItem>苏州大学</asp:ListItem>
                 </asp:DropDownList>
             </td>
         </tr>
@@ -165,7 +190,7 @@
         </tr>
         <tr>
             <td class="auto-style7" colspan="2">
-                <asp:Button ID="MSA" runat="server" PostBackUrl="~/Student/Student.aspx" Text="添加" />
+                <asp:Button ID="MSA" runat="server" Text="添加" OnClick="MSA_Click" style="height: 21px" />
             </td>
         </tr>
     </table>

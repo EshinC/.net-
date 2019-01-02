@@ -42,7 +42,7 @@
                         <asp:Label ID="Label3" runat="server" Text="身份"></asp:Label>
                     </td>
                     <td class="auto-style1">&nbsp;<asp:DropDownList ID="type" runat="server" CssClass="auto-style2">
-                        <asp:ListItem Value="teacher">管理员</asp:ListItem>
+                        <asp:ListItem Value="manager">管理员</asp:ListItem>
                         <asp:ListItem Value="company">企业</asp:ListItem>
                         <asp:ListItem Value="student">学生</asp:ListItem>
                         </asp:DropDownList>

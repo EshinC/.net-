@@ -32,7 +32,7 @@ public partial class Login : System.Web.UI.Page
             {
                 Response.Write("<script>window.location='/Student/student.aspx'</script>");
             }
-            else if (ds.Tables[0].Rows.Count > 0 && type.SelectedValue == "teacher")
+            else if (ds.Tables[0].Rows.Count > 0 && type.SelectedValue == "manager")
             {
                 Response.Write("<script>window.location='/Manager/Manager.aspx'</script>");
             }
